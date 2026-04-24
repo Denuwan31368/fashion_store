@@ -1,4 +1,22 @@
+Technical Note for Evaluators
+
+To ensure the application launches correctly without path errors, please follow these steps:
+
+Clone/Download: Clone the repository or download the ZIP from GitHub and extract it fully.
+
+Open Correct Directory: Open VS Code and use "File > Open Folder". Navigate directly into the folder that contains the pubspec.yaml file.
+
+Important: Opening a parent folder instead of the project root will cause the "No pubspec.yaml found" error.
+
+Restore Dependencies: Because the build/ and .dart_tool/ folders are excluded for efficiency (via .gitignore), you must run the following command in the VS Code terminal to download the required packages:
+flutter pub get
+
+Launch: Once the dependencies are fetched, run the application using:
+flutter run
+
+
 Developer Note for Evaluators To test the application
+
 1. Launch: View the Splash Screen on startup.
 2. Login: Enter any text for the username/password to bypass authentication for this
 phase.
